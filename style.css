@@ -1,0 +1,79 @@
+
+circle{
+    fill-opacity: .9;
+}
+line{
+    stroke:#909090;
+    stroke-opacity:0.5;
+}
+.label{
+    font-size: 5px;
+    font-family: sans-serif;
+
+
+}
+.inactive{
+    opacity: .2;
+}
+
+.lineInactive{
+    opacity: 0.1;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    font-family: sans-serif;
+    font-size: 14px;
+    color: whitesmoke;
+}
+body {
+    /*https://grainy-gradients.vercel.app/*/
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background:  url(https://grainy-gradients.vercel.app/noise.svg);
+    background-repeat:no-repeat;
+    background: linear-gradient(120deg, black, slategray);
+}
+
+#container {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+    vertical-align: top;
+    overflow: hidden;
+}
+
+.svg-content {
+    /*https://chartio.com/resources/tutorials/how-to-resize-an-svg-when-the-window-is-resized-in-d3-js/*/
+    /*display: inline-block;*/
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*left: 0;*/
+}
+
+
+
+#tooltip {
+    overflow-wrap: break-word;
+    position: fixed;
+    top: 2vh;
+    right: 0px;
+    opacity: 0;
+    inline-size: 200px;
+    width: 200px;
+    padding: 1vw;
+    margin-right: 2vw;
+    margin-bottom: 2vw;
+    background: white;
+    font-family: sans-serif;
+    font-size: 14px;
+    line-height: 1;
+    z-index: 99;
+    border-radius: 8px;
+}

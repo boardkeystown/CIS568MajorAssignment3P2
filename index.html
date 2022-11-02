@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Make Force Layout</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="network.js"></script>
+</head>
+<body>
+<div class="title">MajorAssignment 3P2: Force layout visualization using d3js</div>
+<div class="title">boardkeystown</div>
+<div class="title">CIS 568 Fall 2022</div>
+<div id="tooltip"></div>
+<script>
+  d3.json("./data/publication_network_index.json").then(function (data){
+    let svg = d3.select('body')
+            .append("div")
+            .attr("id","container")
+            .append("svg")
+            .attr("preserveAspectRatio", "xMinYMin meet")
+            .attr("viewBox","0 0 2000 1000")
+    simulate(data,svg) // main function to make network
+  })
+</script>
+<div> </div>
+</body>
+</html>
