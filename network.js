@@ -1,5 +1,7 @@
-//https://stackoverflow.com/questions/24784302/wrapping-text-in-d3
+
 function wrap(text, width) {
+    //Did not end up using
+    //https://stackoverflow.com/questions/24784302/wrapping-text-in-d3
     text.each(function () {
         var text = d3.select(this),
             words = text.text().split(/\s+/).reverse(),
@@ -281,7 +283,9 @@ function simulate(data,svg)
             })
             // .distance(d=>d.index/1993)
             // .strength(d=>d.index*0.0001999999999999999999)
-            .distance(d=>d.value)
+            // .distance(d=>d.value*2)
+            // .strength(d=>d.value*0.01)
+            .distance(d=>d.value*2)
             .strength(d=>d.value*0.01)
         )
         .on("tick", ticked);
